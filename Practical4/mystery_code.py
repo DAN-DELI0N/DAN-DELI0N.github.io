@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:This piece of code is to add 100 numbers which are randomly chosen from 1-10 together.
+# Answer:This piece of code is adding 100 numbers which are randomly chosen from 1-10 together.
 
 # Import libraries
 # randint allows drawing a random number,

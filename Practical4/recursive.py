@@ -1,5 +1,5 @@
 a=0.5
-for i in range(1,6) :
+for i in range(1,6) : #loop 5 times
     a=2*a+3 
     print(a)
 

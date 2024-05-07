@@ -1,0 +1,12 @@
+1: seq1: human seq2: mouse 
+  alignment score=  3137 identity=  92.53968253968254 % 
+
+seq1: human seq2: rat 
+  alignment score=  3107 identity=  91.74603174603175 % 
+
+seq1: rat seq2: mouse 
+  alignment score=  3261 identity=  96.82539682539682 %
+
+2: Rat and mouse are most closely linked
+
+3: Mouse is a better model organism for human than rat.

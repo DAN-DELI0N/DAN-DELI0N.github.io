@@ -3,7 +3,7 @@ repeat_sequence=input("Enter the repetitive sequence (GTGTGT or GTCTGT): ")
 
 filename="Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa"
 
-output_file = repeat_sequence+"_duplicate_genes.fa"
+output_file = repeat_sequence+"_duplicate_genes.fa" 
 
 
 with open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa",'r') as content :
@@ -11,7 +11,7 @@ with open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa",'r') as content :
     gene_id=None
     gene_sequence=""
     genes_str = ""
-    output_1= False
+    output_1= False #read the fasta file
 
     
     for line in content:
@@ -27,7 +27,7 @@ with open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa",'r') as content :
                 
         else: 
             if output_1==True :
-                gene_sequence+=line
+                gene_sequence+=line   #get the duplicated genes
                     
 
 for gene_id, gene_sequence in genes:

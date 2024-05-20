@@ -1,8 +1,8 @@
 cities1=["Edinburgh","Glasgow","Stirling","London"]
-cities2=["Haining","Hangzhou","Shanghai","Beijing"]
+cities2=["Haining","Hangzhou","Shanghai","Beijing"]  #input the name of cities
 
 UK_cities=[0.56,0.62,0.04,9.7]
-China_cities=[0.58,8.4,29.9,22.2]
+China_cities=[0.58,8.4,29.9,22.2]     #input the values
 sorted_UK_cities=sorted(UK_cities)
 sorted_China_cities=sorted(China_cities)
 print(sorted_UK_cities)

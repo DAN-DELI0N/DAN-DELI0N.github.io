@@ -1,3 +1,4 @@
+import math
 a=0.05 #initial density
 day=0
 while a<=0.9 :  #samller than 90%
@@ -5,4 +6,5 @@ while a<=0.9 :  #samller than 90%
     a=2*a    #cell line doubles in density every 24 hours
     if a>0.9 :
         break
+day=math.ceil(day)-1
 print(day)

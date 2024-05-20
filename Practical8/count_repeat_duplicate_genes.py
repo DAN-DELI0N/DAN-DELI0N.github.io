@@ -32,11 +32,11 @@ with open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa",'r') as content :
 
 for gene_id, gene_sequence in genes:
         repeat_count = gene_sequence.count(repeat_sequence)
-        genes_str+= f">{gene_id}:{repeat_count}\n{gene_sequence}\n"
+        genes_str+= f">{gene_id}:{repeat_count}\n{gene_sequence}\n"  #calculate the number of repeat sequences
 
 
 with open(output_file, 'w') as output:
-    output.write(genes_str)
+    output.write(genes_str) #output the file
             
 print(output_file)
 

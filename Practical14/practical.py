@@ -7,7 +7,7 @@ from datetime import datetime
 time1=datetime.now()
 DOMTree=xml.dom.minidom.parse("go_obo.xml")
 collection=DOMTree.documentElement
-terms=collection.getElementsByTagName('term')
+terms=collection.getElementsByTagName('term')  #read the file and collect the data
 
 ontologies=['Molecular Function', 'Biological Process', 'Cellular Component']
 molecular_function_count1 = 0
@@ -21,8 +21,8 @@ for term in terms:
     elif namespace=="biological_process":
         biological_process_count1+=1
     elif namespace=="cellular_component":
-        cellular_component_count1+=1
-time2=datetime.now()
+        cellular_component_count1+=1    #get the number of each term
+time2=datetime.now() #get the time of processing
 
 dom=[molecular_function_count1, biological_process_count1, cellular_component_count1]
 print("DOM API \n","molecular_function: ", molecular_function_count1 ,'\n',"biological_process: ", biological_process_count1 ,'\n', "cellular_component: ", cellular_component_count1 )
@@ -47,7 +47,7 @@ class TermHandler(xml.sax.ContentHandler):
             elif self.namespace=="biological_process":
                 self.biological_process_count2+=1
             elif self.namespace=="cellular_component":
-                self.cellular_component_count2+=1
+                self.cellular_component_count2+=1   #define the function of SAX
 
 
 time3=datetime.now()
@@ -64,7 +64,7 @@ print("SAX API time: ", time4-time3)
 if time4-time3>time2-time1:
     print("DOM is quicker")
 else:
-    print("SAX is quicker")
+    print("SAX is quicker")   #state which API is quicker
 
 
 
@@ -83,4 +83,4 @@ plt.ylabel("number of terms")
 plt.title("SAX API")
 plt.legend()
 plt.show()
-plt.clf()
+plt.clf()  #write the 2 plots of result by different APIs

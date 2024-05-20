@@ -4,7 +4,7 @@ rat="METTPLNSQKVLSECKDREDCQENGVLQKGVPTTADRAEPSQISNGYSAVPSTSAGDEA SHSIPAATTTLVAEI
 human=human.replace(" ","")
 mouse=mouse.replace(" ","")
 rat=rat.replace(" ","")
-a=len(human)
+a=len(human)  #input the 3 sequences
 
 amino = ['A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V']
 blosum = [[ 4, -1, -2, -2,  0, -1, -1,  0, -2, -1, -1, -1, -1, -2, -1,  1,  0, -3, -2,  0, -2, -1,  0, -4],
@@ -32,7 +32,7 @@ blosum = [[ 4, -1, -2, -2,  0, -1, -1,  0, -2, -1, -1, -1, -1, -2, -1,  1,  0, -
 [ 0, -1, -1, -1, -2, -1, -1, -1, -1, -1, -1, -1, -1, -1, -2,  0,  0, -2, -1, -1, -1, -1, -1, -4],
 [-4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4,  1],]
 
-
+#input the blosum62 matrix to calculaate the alignment score
 
 def calculation(seq1, seq2) :
     same=0
@@ -45,9 +45,9 @@ def calculation(seq1, seq2) :
         alignment_score+=blosum[aa1][aa2]
         if seq1[i]==seq2[i] :
             same+=1
-        percentage=same/a
+        percentage=same/a 
     
-    return percentage, alignment_score
+    return percentage, alignment_score    #calculate the percentage of identity and the alignment score og blosum62
 
 human_mouse=calculation(human, mouse)
 alignment_score_human_mouse=human_mouse[1]
@@ -57,7 +57,7 @@ alignment_score_human_rat=human_rat[1]
 percentage_human_rat=human_rat[0] 
 rat_mouse=calculation(rat, mouse)
 alignment_score_rat_mouse=rat_mouse[1]
-percentage_rat_mouse=rat_mouse[0]
+percentage_rat_mouse=rat_mouse[0] 
 
 print("seq1: human seq2: mouse \n ", "alignment score= ", alignment_score_human_mouse, "identity= ", percentage_human_mouse*100, "% \n" )
 print("seq1: human seq2: rat \n ", "alignment score= ", alignment_score_human_rat, "identity= ", percentage_human_rat*100, "% \n" )

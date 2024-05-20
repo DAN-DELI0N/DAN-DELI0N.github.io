@@ -1,1 +1,2 @@
 It's difficult to make a long and complex programme. And there are many loops in it. And update the state of people is also a problem for me.
+The important thing I learned is mastering the several interesting functions and learning how to deal with this kind of problems.

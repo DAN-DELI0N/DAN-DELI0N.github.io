@@ -16,7 +16,7 @@ for time in range(1,1000) :
     probability_infected=beta*all_infected[-1]/(total-1)
     probability_recovered=gamma
     new_infected=np.random.choice(range(2), all_susceptible[-1], p=[1-probability_infected,probability_infected]).sum()
-    new_recovered=np.random.choice(range(2), all_infected[-1], p=[1-probability_recovered,probability_recovered]).sum()
+    new_recovered=np.random.choice(range(2), all_infected[-1], p=[1-probability_recovered,probability_recovered]).sum() #get the random number from the np.random.choice function
 
     all_susceptible.append(all_susceptible[-1]-new_infected)
     all_infected.append(all_infected[-1]+new_infected-new_recovered)
